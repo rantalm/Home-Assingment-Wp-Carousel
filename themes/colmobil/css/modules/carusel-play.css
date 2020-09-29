@@ -1,0 +1,32 @@
+.carusel-play {
+  @mixin atSmall {
+    display: none;
+  }
+
+  position: absolute;
+  bottom: 85px;
+  left: 100px;
+  height: 60px;
+  width: 60px;
+  border: 1px solid darkgrey;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: color, background-color 250ms linear;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .fa {
+    display: none;
+    &--active {
+      display: inline-block;
+    }
+  }
+}

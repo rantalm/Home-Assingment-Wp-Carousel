@@ -1,0 +1,64 @@
+.thumbs-carusel {
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+
+  &__container {
+    bottom: 50px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+
+    @mixin atSmall {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 100%;
+      bottom: initial;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: darkgray;
+  }
+
+  &__progress-bar {
+    z-index: 10;
+    width: 0%;
+    background-color: brown;
+
+    @mixin atSmall {
+      display: none;
+    }
+  }
+
+  .swiper-slide {
+    color: #fff;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+
+    &:hover {
+      color: brown;
+      text-shadow: #fff 1px 1px 2px;
+    }
+  }
+
+  .swiper-slide-thumb-active {
+    color: brown;
+    text-shadow: #fff 1px 1px 2px;
+    .thumbs-carusel__progress-bar {
+      width: 100%;
+      transition: width 3200ms linear;
+    }
+  }
+}

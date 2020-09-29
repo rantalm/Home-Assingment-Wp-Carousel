@@ -1,0 +1,37 @@
+.main-carusel {
+  height: 800px;
+  position: relative;
+  color: #fff;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @mixin atSmall {
+      height: 300px;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    width: 350px;
+    margin: 0 10% 0 auto;
+
+    @mixin atSmall {
+      top: 0;
+      background-color: #000;
+      position: relative;
+      margin: 0;
+      padding: 80px 20px;
+      width: 100%;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
