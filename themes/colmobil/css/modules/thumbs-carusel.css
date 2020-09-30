@@ -3,8 +3,12 @@
   bottom: 40px;
   text-align: center;
 
+  @mixin atSmall {
+    margin-right: 20px !important;
+  }
+
   &__container {
-    bottom: 50px;
+    bottom: 80px;
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -16,6 +20,7 @@
       z-index: 10;
       width: 100%;
       bottom: initial;
+      top: 62%;
     }
   }
 
@@ -32,11 +37,7 @@
   &__progress-bar {
     z-index: 10;
     width: 0%;
-    background-color: brown;
-
-    @mixin atSmall {
-      display: none;
-    }
+    background-color: $brown;
   }
 
   .swiper-slide {
@@ -47,18 +48,27 @@
     display: flex;
     cursor: pointer;
 
+    @mixin atSmall {
+      justify-content: right;
+      width: 80%;
+    }
+
     &:hover {
-      color: brown;
-      text-shadow: #fff 1px 1px 2px;
+      color: $brown;
     }
   }
 
   .swiper-slide-thumb-active {
-    color: brown;
-    text-shadow: #fff 1px 1px 2px;
+    color: $brown;
+
     .thumbs-carusel__progress-bar {
       width: 100%;
-      transition: width 3200ms linear;
+      transition: width 5200ms linear;
+
+      @mixin atSmall {
+        transition: none;
+        width: 100%;
+      }
     }
   }
 }

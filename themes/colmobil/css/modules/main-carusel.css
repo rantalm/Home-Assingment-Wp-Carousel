@@ -2,13 +2,25 @@
   height: 800px;
   position: relative;
   color: #fff;
+  font-weight: 200;
+
+  &__title {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 200;
+
+    @mixin atSmall {
+      font-size: 36px;
+    }
+  }
 
   &__img {
     height: 100%;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: bottom center;
+    filter: brightness(0.6);
 
     @mixin atSmall {
       height: 300px;
@@ -17,7 +29,7 @@
 
   &__container {
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 350px;
     margin: 0 10% 0 auto;
 
@@ -28,6 +40,14 @@
       margin: 0;
       padding: 80px 20px;
       width: 100%;
+    }
+
+    &--left {
+      left: 10%;
+
+      @mixin atSmall {
+        left: initial;
+      }
     }
   }
 

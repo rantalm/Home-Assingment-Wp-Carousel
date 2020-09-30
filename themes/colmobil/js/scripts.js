@@ -1,17 +1,18 @@
 /** Styles */
 import '../css/style.css'
-
-/** Vendors */
+/** Vendors Styles */
 import 'swiper/swiper-bundle.css'
 
+// used for share app state in a few cases
+
 /** My Modules */
-import initCarusels from './modules/carusels/carusel'
+import carusels from './modules/carusels/carusel'
 
 /**
  *  Code
  */
 
-initCarusels()
+carusels()
 
 // Allow new JS and CSS to load in browser without a traditional page refresh
 if (module.hot) {

@@ -5,7 +5,7 @@
 
   position: absolute;
   bottom: 85px;
-  left: 100px;
+  left: 5%;
   height: 60px;
   width: 60px;
   border: 1px solid darkgrey;
@@ -17,6 +17,17 @@
   cursor: pointer;
   color: #fff;
   transition: color, background-color 250ms linear;
+  outline-offset: 3px;
+  outline-color: transparent;
+
+  &:focus {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* @mixin atMedium {
+    bottom: 145px;
+  } */
 
   &:hover {
     background-color: #fff;

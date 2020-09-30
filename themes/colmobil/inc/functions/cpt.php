@@ -11,7 +11,7 @@ function create_posttype() {
     'labels' => $lables,
     'public' => true,
     'has_archive' => true,
-    'rewrite' => ['slug' => 'דגמים'],
+    // 'rewrite' => ['slug' => 'דגמים'],
     'supports' => ['title', 'editor', 'author', 'thumbnail', 'excerpt']
   ];
 
