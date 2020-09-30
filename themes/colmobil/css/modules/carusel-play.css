@@ -25,10 +25,6 @@
     color: #000;
   }
 
-  /* @mixin atMedium {
-    bottom: 145px;
-  } */
-
   &:hover {
     background-color: #fff;
     color: #000;

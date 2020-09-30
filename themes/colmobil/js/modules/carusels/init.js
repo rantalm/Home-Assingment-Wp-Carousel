@@ -1,10 +1,10 @@
 import Swiper from 'swiper/bundle'
 
-import { isMobile } from '../../util'
-import { appData } from '../../util'
+import { isMobile, appData } from '../../util'
 
 const initCarusels = () => {
   if (!document.querySelector('.main-carusel')) return
+
   // initiate thumbnails carusel
   appData.thumbsCarusel = new Swiper('.thumbs-carusel', {
     slidesPerView: isMobile() ? 'auto' : 4,

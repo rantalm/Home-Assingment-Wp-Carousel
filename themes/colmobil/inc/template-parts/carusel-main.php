@@ -62,7 +62,7 @@ wp_reset_postdata();
     </div>
     <div class="carusel-play" id="carusel-play" tabindex="0">
       <i class="fa fa-play"></i>
-      <i class="fa fa--active fa-pause"></i></div>
+      <i class="fa fa-pause fa--active"></i></div>
   </section>
 
 

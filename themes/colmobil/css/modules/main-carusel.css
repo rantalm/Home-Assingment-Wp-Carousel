@@ -35,10 +35,10 @@
 
     @mixin atSmall {
       top: 0;
-      background-color: #000;
+      background-color: $dark;
       position: relative;
       margin: 0;
-      padding: 80px 20px;
+      padding: 120px 20px;
       width: 100%;
     }
 

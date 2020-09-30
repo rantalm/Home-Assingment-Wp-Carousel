@@ -1,5 +1,5 @@
 /* 3rd party packages */
-/* @import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css"; */
+@import '../node_modules/swiper/swiper-bundle.css';
 
 /* SASS and Global'ish Stuff */
 @import 'base/variables';

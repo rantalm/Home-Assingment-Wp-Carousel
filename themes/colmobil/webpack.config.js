@@ -31,7 +31,11 @@ class RunAfterCompile {
       // update functions php here
       const manifest = fse.readJsonSync('./bundled-assets/manifest.json')
 
-      fse.readFile('./functions.php', 'utf8', function (err, data) {
+      // fse.readFile('./functions.php', 'utf8', function (err, data) {
+      //   if (err) {
+      //     console.log(err)
+      //   }
+      fse.readFile('./inc/functions/enqueue.php', 'utf8', function (err, data) {
         if (err) {
           console.log(err)
         }
@@ -45,7 +49,7 @@ class RunAfterCompile {
           .replace(vendorsRegEx, `/bundled-assets/${manifest['vendors~scripts.js']}'`)
           .replace(cssRegEx, `/bundled-assets/${manifest['scripts.css']}'`)
 
-        fse.writeFile('./functions.php', result, 'utf8', function (err) {
+        fse.writeFile('./inc/functions/enqueue.php', result, 'utf8', function (err) {
           if (err) return console.log(err)
         })
       })
@@ -103,8 +107,8 @@ if (currentTask == 'devFast') {
         perform a traditional refresh even for CSS changes as well.
         */
 
-      // server._watch(["./**/*.php", "./**/*.js"])
-      server._watch(['./**/*.php', '!./functions.php'])
+      server._watch(['./**/*.php', './**/*.js'])
+      //server._watch(['./**/*.php', '!./functions.php'])
     },
     public: 'http://localhost:3000',
     publicPath: 'http://localhost:3000/',

@@ -4,6 +4,8 @@ const { mainCarusel, thumbsCarusel } = appData
 let { transitionTimeOut } = appData
 
 export const thumbClickHandler = () => {
+  if (!mainCarusel) return
+
   thumbsCarusel.on('click', () => {
     if (isMobile()) return
 
@@ -18,6 +20,8 @@ export const playBtnHandler = () => {
   if (isMobile()) return
 
   const btn = document.querySelector('#carusel-play')
+  if (!btn) return
+
   btnOutlineHandler(btn)
 
   btn.addEventListener('click', (e) => {
@@ -53,6 +57,8 @@ export const playBtnHandler = () => {
  * Swiper event
  */
 export const slideChangeHandler = () => {
+  if (!mainCarusel) return
+
   mainCarusel.on('slideChange', function () {
     // remove prev slide progress bar
     const progressBarToReset = document.querySelectorAll(
