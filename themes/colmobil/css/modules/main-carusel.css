@@ -32,6 +32,9 @@
     top: 40%;
     width: 350px;
     margin: 0 10% 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px 20px;
+    top: 35%;
 
     @mixin atSmall {
       top: 0;
